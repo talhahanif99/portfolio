@@ -157,3 +157,48 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+    // Function to show a toast
+    function showToast(message) {
+      // Create a new div element for the toast
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.textContent = message;
+
+      // Append the toast to the container
+      const toastContainer =  document.getElementById('toast-container')
+      toastContainer.appendChild(toast);
+     console.log(document.getElementById('toast-container'));
+
+      // Show the toast
+      toastContainer.style.display = 'block';
+
+      // Hide the toast after a delay (e.g., 3 seconds)
+      setTimeout(function() {
+        toast.style.display = 'none';
+        // Remove the toast element from the container
+        document.getElementById('toast-container').removeChild(toast);
+      }, 3000);
+    }
+
+
+function sendMail(e){
+  e.preventDefault();
+  const params = {
+    from_name : document.getElementById("from_name").value,
+    email_id : document.getElementById("email_id").value,
+    message : document.getElementById("message").value
+  }
+
+  
+  emailjs.send("service_3i7i6rj","template_9t0ym69", params, "F4IzUOoV3uaklq1w7").then((res) => {
+    e.target.reset()
+    showToast('Email Sent Successfully!');
+  }).catch((err) => {
+    console.log(err);
+  });
+}
+   
+
+

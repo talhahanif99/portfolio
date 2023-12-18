@@ -354,6 +354,8 @@ main {
   border-radius: 8px;
 }
 
+
+
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -1221,6 +1223,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.copyright {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+}
+
+
+
 
 
 
@@ -1499,6 +1509,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
+
+
+  .resume {
+    margin-top: 16px;
+  }
 
 
 
@@ -1835,7 +1850,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { width: 170px; }
 
   .info-content .name {
     white-space: nowrap;
@@ -1879,4 +1894,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* Toast */
+
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #ffd77c;
+  padding: 10px;
+  border-radius: 7px;
+  display: none;
+  z-index: 1000;
 }
