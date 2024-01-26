@@ -1004,6 +1004,7 @@ main {
 
 .project-item {
   display: none;
+  justify-content: flex-end;
 }
 
 .project-item.active {
